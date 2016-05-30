@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+>
+    <LinearLayout
+        android:id="@+id/name4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="20dp"
+
+            android:src="@mipmap/pic_4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看记事"
+            android:layout_gravity="center_vertical"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/ed_diary_title"
+        android:layout_below="@+id/name4"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题"
+        android:singleLine="true"
+        android:layout_marginBottom="20dp"/>
+    <EditText
+        android:id="@+id/ed_diary_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="3"
+        android:hint="内容"
+        android:layout_below="@+id/ed_diary_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/btn_diary_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="修改"
+        android:onClick="click"
+        android:layout_marginLeft="210dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/btn_diary_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="click"
+        android:text="删除"
+        android:layout_toRightOf="@id/btn_diary_update"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.frg.GridFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <in.srain.cube.views.GridViewWithHeaderAndFooter
+        android:id="@+id/discount_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp">
+
+    </in.srain.cube.views.GridViewWithHeaderAndFooter>
+
+</FrameLayout>

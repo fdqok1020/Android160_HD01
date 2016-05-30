@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PullToRefreshLibrary/PullToRefreshLibrary.iml" filepath="$PROJECT_DIR$/PullToRefreshLibrary/PullToRefreshLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookapplication/bookapplication.iml" filepath="$PROJECT_DIR$/bookapplication/bookapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dependcenyapplication/dependcenyapplication.iml" filepath="$PROJECT_DIR$/dependcenyapplication/dependcenyapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examapplication/examapplication.iml" filepath="$PROJECT_DIR$/examapplication/examapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flowerseaapplication/flowerseaapplication.iml" filepath="$PROJECT_DIR$/flowerseaapplication/flowerseaapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handlerapplication/handlerapplication.iml" filepath="$PROJECT_DIR$/handlerapplication/handlerapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework1/homework1.iml" filepath="$PROJECT_DIR$/homework1/homework1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myhomework/myhomework.iml" filepath="$PROJECT_DIR$/myhomework/myhomework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mylayoutapplication/mylayoutapplication.iml" filepath="$PROJECT_DIR$/mylayoutapplication/mylayoutapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mynotepad/mynotepad.iml" filepath="$PROJECT_DIR$/mynotepad/mynotepad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refreshlibrary/refreshlibrary.iml" filepath="$PROJECT_DIR$/refreshlibrary/refreshlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingpaneapplication/slidingpaneapplication.iml" filepath="$PROJECT_DIR$/slidingpaneapplication/slidingpaneapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagedemo/viewpagedemo.iml" filepath="$PROJECT_DIR$/viewpagedemo/viewpagedemo.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="E:\Program Files\Android\Android Studio\gradle\gradle-2.10" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PullToRefreshLibrary" />
+            <option value="$PROJECT_DIR$/bookapplication" />
+            <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/dependcenyapplication" />
+            <option value="$PROJECT_DIR$/examapplication" />
+            <option value="$PROJECT_DIR$/flowerseaapplication" />
+            <option value="$PROJECT_DIR$/handlerapplication" />
+            <option value="$PROJECT_DIR$/homework1" />
+            <option value="$PROJECT_DIR$/myhomework" />
+            <option value="$PROJECT_DIR$/mylayoutapplication" />
+            <option value="$PROJECT_DIR$/mynotepad" />
+            <option value="$PROJECT_DIR$/refreshlibrary" />
+            <option value="$PROJECT_DIR$/slidingpaneapplication" />
+            <option value="$PROJECT_DIR$/viewpagedemo" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PullToRefreshLibrary" />
+            <option value="$PROJECT_DIR$/bookapplication" />
+            <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/dependcenyapplication" />
+            <option value="$PROJECT_DIR$/examapplication" />
+            <option value="$PROJECT_DIR$/flowerseaapplication" />
+            <option value="$PROJECT_DIR$/handlerapplication" />
+            <option value="$PROJECT_DIR$/homework1" />
+            <option value="$PROJECT_DIR$/myhomework" />
+            <option value="$PROJECT_DIR$/mylayoutapplication" />
+            <option value="$PROJECT_DIR$/mynotepad" />
+            <option value="$PROJECT_DIR$/refreshlibrary" />
+            <option value="$PROJECT_DIR$/slidingpaneapplication" />
+            <option value="$PROJECT_DIR$/viewpagedemo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

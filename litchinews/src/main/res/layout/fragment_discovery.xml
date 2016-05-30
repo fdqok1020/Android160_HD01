@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.frg.DiscoveryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_dis_title"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/newicon"/>
+    <TextView
+        android:layout_toRightOf="@+id/iv_dis_title"
+        android:id="@+id/tv_dis_title"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="荔枝新闻"
+        android:textStyle="bold"
+        android:textSize="17sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/tv_dis_title"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/attention_shake"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+
+
+        android:layout_below="@+id/iv_dis_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ptflv"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

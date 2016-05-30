@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.app.AddActivity">
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/ed_book_name"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:hint="请输入图书名称："
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/ed_book_author"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:hint="请输入图书作者："
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="15dp"
+        android:id="@+id/ed_book_price"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:hint="请输入图书价格："
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/submit"
+        android:text="提交"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

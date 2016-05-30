@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+   <ImageView
+       android:id="@+id/tv_show"
+       android:scaleType="fitXY"
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+       android:src="@mipmap/pic1"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tv_show"
+        android:layout_marginLeft="8dp"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/iv_nopic"
+        android:text="河北邯郸：娃娃洗手绢感受母恩"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_nopic"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_show"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mode_nopic"/>
+
+
+
+</RelativeLayout>

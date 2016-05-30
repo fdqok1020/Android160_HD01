@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.activity.OrderActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:onClick="click"
+        android:src="@drawable/back"/>
+    <RadioGroup
+        android:id="@+id/btn_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/btn_login"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_left_button"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="登录"
+            android:textColor="@color/order_btn_selector" />
+        <RadioButton
+            android:id="@+id/btn_register"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/order_right_button"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="注册"
+            android:textColor="@color/order_btn_selector" />
+    </RadioGroup>
+</RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_frg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

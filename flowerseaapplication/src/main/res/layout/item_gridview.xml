@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="280dp"
+        android:layout_height="230dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/placeholder_logo" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_img"
+        android:layout_marginTop="10dp"
+        android:text="价格"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="折扣"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_alignRight="@id/iv_img"
+        android:background="@drawable/sale"/>
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/heart_empty"
+    android:layout_below="@+id/iv_img"
+    android:layout_alignRight="@+id/tv_discount"
+    android:layout_alignEnd="@+id/tv_discount" />
+
+</RelativeLayout>

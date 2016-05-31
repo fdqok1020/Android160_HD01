@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.qianfeng.giftapplication.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/home_fragment_fl"
+        android:layout_above="@+id/home_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/home_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+        android:id="@+id/home_radio_button_guide"
+        style="@style/HomeRadioButton"
+        android:text="指南"
+            android:drawableTop="@drawable/radion_button_guide_secector"
+        />
+        <RadioButton
+            android:drawableTop="@drawable/radion_button_hot_secector"
+            android:id="@+id/home_radio_button_hot"
+            style="@style/HomeRadioButton"
+            android:text="热门"
+            />
+        <RadioButton
+            android:drawableTop="@drawable/radion_button_category_secector"
+            android:id="@+id/home_radio_button_category"
+            style="@style/HomeRadioButton"
+            android:text="分类"
+            />
+        <RadioButton
+            android:drawableTop="@drawable/radion_button_my_secector"
+            android:id="@+id/home_radio_button_my"
+            style="@style/HomeRadioButton"
+            android:text="我的"
+            />
+
+    </RadioGroup>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.frg.GuideFragment">
+    <android.support.v7.widget.Toolbar
+        android:background="#FF2d47"
+        android:id="@+id/home_guide_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/btn_signin"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="礼物说"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <ImageView
+
+                android:id="@+id/home_toolbar_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/abc_ic_search"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/selected_expand_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null"
+        android:layout_below="@+id/home_guide_toolbar" />
+
+</RelativeLayout>

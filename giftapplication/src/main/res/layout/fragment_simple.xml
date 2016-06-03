@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.frg.SimpleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.Toolbar
+        android:background="#FF2d47"
+        android:id="@+id/home_guide_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/btn_signin"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="礼物说"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <ImageView
+
+                android:id="@+id/home_toolbar_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/abc_ic_search"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <!-- pstsDividerColor     设置没个控件之间的间隔的颜色
+         pstsIndicatorHeight  设置滑动的横线的高度
+         pstsIndicatorColor   设置滑动的横线的颜色-->
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/home_table_strip"
+        app:pstsDividerColor="#00ffffff"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsIndicatorColor="#FF2d47"
+        android:layout_below="@id/home_guide_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    </com.astuetz.PagerSlidingTabStrip>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_view_pager"
+        android:layout_below="@id/home_table_strip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,13 +1,47 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.frg.HotFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:background="#FF2d47"
+        android:id="@+id/hot_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="热门" />
+        android:layout_height="?actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</FrameLayout>
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="礼物说"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <ImageView
+
+                android:id="@+id/home_toolbar_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/abc_ic_search"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <GridView
+        android:layout_below="@id/hot_toolbar"
+        android:id="@+id/hot_fragment_grid_view"
+        android:layout_width="match_parent"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:verticalSpacing="5dp"
+        android:layout_height="match_parent">
+
+    </GridView>
+
+</RelativeLayout>

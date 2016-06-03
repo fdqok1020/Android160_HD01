@@ -31,13 +31,18 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile project(':refreshlibrary')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:support-v4:23.3.0'
     compile 'com.jakewharton:butterknife:8.0.1'
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
-    compile project(':refreshlibrary')
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.makeramen:roundedimageview:2.2.1'
     compile 'com.jakewharton:disklrucache:2.0.2'
     compile 'com.netflix.feign:feign-gson:8.16.2'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+
 }

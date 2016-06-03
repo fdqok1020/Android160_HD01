@@ -9,11 +9,15 @@
       <module fileurl="file://$PROJECT_DIR$/dependcenyapplication/dependcenyapplication.iml" filepath="$PROJECT_DIR$/dependcenyapplication/dependcenyapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/examapplication/examapplication.iml" filepath="$PROJECT_DIR$/examapplication/examapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/flowerseaapplication/flowerseaapplication.iml" filepath="$PROJECT_DIR$/flowerseaapplication/flowerseaapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/giftapplication/giftapplication.iml" filepath="$PROJECT_DIR$/giftapplication/giftapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/handlerapplication/handlerapplication.iml" filepath="$PROJECT_DIR$/handlerapplication/handlerapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework1/homework1.iml" filepath="$PROJECT_DIR$/homework1/homework1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httplibrary/httplibrary.iml" filepath="$PROJECT_DIR$/httplibrary/httplibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/myhomework/myhomework.iml" filepath="$PROJECT_DIR$/myhomework/myhomework.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylayoutapplication/mylayoutapplication.iml" filepath="$PROJECT_DIR$/mylayoutapplication/mylayoutapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/mynotepad/mynotepad.iml" filepath="$PROJECT_DIR$/mynotepad/mynotepad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttpapplication/okhttpapplication.iml" filepath="$PROJECT_DIR$/okhttpapplication/okhttpapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttpdemoapplication/okhttpdemoapplication.iml" filepath="$PROJECT_DIR$/okhttpdemoapplication/okhttpdemoapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/refreshlibrary/refreshlibrary.iml" filepath="$PROJECT_DIR$/refreshlibrary/refreshlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/slidingpaneapplication/slidingpaneapplication.iml" filepath="$PROJECT_DIR$/slidingpaneapplication/slidingpaneapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpagedemo/viewpagedemo.iml" filepath="$PROJECT_DIR$/viewpagedemo/viewpagedemo.iml" />

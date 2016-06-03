@@ -1,3 +1,3 @@
-include ':mynotepad', ':homework1', ':myhomework', ':viewpagedemo', ':handlerapplication', ':examapplication', ':bookapplication', ':customview', ':mylayoutapplication', ':slidingpaneapplication', ':flowerseaapplication', ':dependcenyapplication'
+include ':mynotepad', ':homework1', ':myhomework', ':viewpagedemo', ':handlerapplication', ':examapplication', ':bookapplication', ':customview', ':mylayoutapplication', ':slidingpaneapplication', ':flowerseaapplication', ':dependcenyapplication', ':giftapplication', ':okhttpdemoapplication', ':okhttpapplication', 'httplibrary'
 include ':PullToRefreshLibrary'
 include ':refreshlibrary'

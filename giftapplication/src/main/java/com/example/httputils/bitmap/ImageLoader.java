@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.widget.ImageView;
-
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.IOException;
@@ -17,117 +16,98 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Administrator on 2016/5/30.
+ * Created by Administrator on 2016/5/23.
  */
 public class ImageLoader {
-    private static final String TAG = "androidxx";
-    private static ExecutorService executorService;
-    private static Handler mHandler = new Handler();
-
-    static {
-        if (executorService == null) {
-            //创建一个单个的线程池
-            executorService = Executors.newSingleThreadExecutor();
+    private  static final String TAG = "androidxx";
+    private  static ExecutorService  executorService;
+    private  static Handler mHandler = new Handler();
+    static  {
+        if(executorService == null){
+            executorService  = Executors.newSingleThreadExecutor();
         }
     }
-
-
-    public static void loadImage(Context context, final String path, final ImageView imageView) {
-        DiskCacheTool.init(context);
-
-        //首先在内存中取
+    public  static void loadImage(Context context, final String path, final ImageView imageView){
+            DiskCacheTool.init(context);
+        imageView.setTag(path);
+        //首先从内存中读取
         Bitmap bitmap = MemoryCacheTool.readBitmapFromCache(path);
-        if (bitmap != null) {
+        if(bitmap!= null){
             imageView.setImageBitmap(bitmap);
-        } else {
+        }else{
             Bitmap bitmap1 = DiskCacheTool.readBitmapFromDisk(path);
-            if (bitmap1 != null) {
-                imageView.setImageBitmap(bitmap);
-                MemoryCacheTool.writeBitmapToCache(path,bitmap1);
-            } else {
-                //内存中没有就从网络上取
+            if(bitmap1 != null) {
+                imageView.setImageBitmap(bitmap1);
+                MemoryCacheTool.writeBitmapToCache(path, bitmap1);
+            }else{//内存中没有，去网络上获取
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
-                        final Bitmap bitmap = getBitmapFromNetwork(path);
-
-                        mHandler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (imageView.getTag().toString().equals(path)) {
-                                    MemoryCacheTool.writeBitmapToCache(path,bitmap);
-                                    imageView.setImageBitmap(bitmap);
-                                }
+                        final  Bitmap bitmap = getBitmapFromNetwork(path);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (imageView.getTag().toString().equals(path)){
+//                                MemoryCacheTool.writeBitmapToCache(path,bitmap);
+                                imageView.setImageBitmap(bitmap);
                             }
-                        });
+                        }
+                    });
                     }
+
+
                 });
             }
-
-
         }
     }
+    //请求网络图片
+     private  static  Bitmap getBitmapFromNetwork(String address){
+         HttpURLConnection httpURLConnection = null;
+         InputStream inputStream = null;
+         try {
+             URL  url = new URL(address);
+             httpURLConnection = (HttpURLConnection) url.openConnection();
+             httpURLConnection.connect();
+             if (httpURLConnection.getResponseCode()==200){
+                 inputStream  = httpURLConnection.getInputStream();
+                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                 int len = 0;
+                 byte[] buffer = new byte[1024];
+                 while ((len = inputStream.read(buffer)) != -1){
+                     byteArrayOutputStream.write(buffer,0,len);
+                     byteArrayOutputStream.flush();
+                 }
+                 byte[] byteArray = byteArrayOutputStream.toByteArray();
+                 BitmapFactory.Options  options = new BitmapFactory.Options();
+                 options.inJustDecodeBounds = true;
+                 BitmapFactory.decodeByteArray(byteArray,0,byteArray.length,options);
 
-    /**
-     * 请求网络图片
-     */
-    private static Bitmap getBitmapFromNetwork(String address) {
-        HttpURLConnection httpURLConnection = null;
-        InputStream inputStream = null;
-        try {
-            URL url = new URL(address);
-            httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.connect();
-            if (httpURLConnection.getResponseCode() == 200) {
-                inputStream = httpURLConnection.getInputStream();
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
-                int len = 0;
-                byte[] buffer = new byte[1024];
-
-                while ((len = inputStream.read(buffer)) != -1) {
-                    byteArrayOutputStream.write(buffer,0,len);
-                    byteArrayOutputStream.flush();
-                }
-
-                byte[] byteArray = byteArrayOutputStream.toByteArray();
-
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                //设置图片解码时，只获取图片的属性，不真正将图片加载到内存
-                options.inJustDecodeBounds = true;
-                BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length, options);
-//                Log.d(TAG, "getBitmapFromNetwork: " + bitmap);
-                //获得图片的宽度和高度
-                int outHeight = options.outHeight;
-                int outWidth = options.outWidth;
-
-                int max = Math.max(outHeight, outWidth);
-                int ratio = max/100;  //计算出来的压缩比例
-                ratio = ratio < 1 ? 1: ratio;
-                options.inSampleSize = ratio;  //将图片压缩到只有原先的ratio分之一
-
-                options.inJustDecodeBounds = false;
-                Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length, options);
-                DiskCacheTool.writeBitmapToDisk(address,bitmap);
-
-                return bitmap;
-            }
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            close(inputStream);
-            httpURLConnection.disconnect();
-        }
-
-        return null;
-    }
-
+                 //获取图片的宽度和高度
+                 int outHeight = options.outHeight;
+                 int outWidth = options.outWidth;
+                 int max = Math.max(outHeight,outWidth);
+                 int ratio = max/400;
+                 ratio = ratio<1?1:ratio;
+                 options.inSampleSize = ratio;
+                 options.inJustDecodeBounds = false;
+                 Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length,options);
+                 DiskCacheTool.writeBitmapToDisk(address,bitmap);
+                 return bitmap;
+             }
+         } catch (MalformedURLException e) {
+             e.printStackTrace();
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+         finally {
+             close(inputStream);
+             httpURLConnection.disconnect();
+         }
+         return  null;
+     }
     private static void close(Closeable closeable) {
-        if (closeable != null) {
-            try {
+        if (closeable != null){
+            try{
                 closeable.close();
             } catch (IOException e) {
                 e.printStackTrace();
